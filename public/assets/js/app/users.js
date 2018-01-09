@@ -11,13 +11,13 @@ define(function (require) {
                 errors: [],
                 users: [],
                 filters: {
-                    country: null
+                    country: 'Russian Federation'
                 }
             };
         },
 
         created() {
-            this.fetchUsers();
+            this.fetchUsers(this.filters);
         },
 
         computed: {

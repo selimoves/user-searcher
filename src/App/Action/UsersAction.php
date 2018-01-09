@@ -44,16 +44,6 @@ class UsersAction
      */
     public function process(ServerRequestInterface $request, DelegateInterface $delegate)
     {
-        //$params = ['country' => 'Labanon'];
-        //$chain = $this->filters->createFilterChain([
-        //    $this->filters->country(':country'), 
-        //    'OR' => $this->filters->state('active'),
-        //    'AND' => [
-        //          $this->filters->id(':id2'), 
-        //          'OR' => $this->filters->id(':id2')
-        //     ]
-        //]);
-        
         $params = $request->getQueryParams();
         $chain = $this->filters->createFilterChain([
             $this->filters->country(':country')
