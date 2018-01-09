@@ -1,6 +1,7 @@
-Hello world!!!
+## Hello world!!!
 
 Фильтры расположены в App/Db/Filters/
+
 Класс поиска пользователей: App\Service\UsersService
 
 Пример формирования цепочки фильтров и передачи их в поиск есть в App\Action\UsersAction.
@@ -33,3 +34,4 @@ Hello world!!!
     $usersService = new \App\Service\UsersService($PDO);
     
     $resultArray = $usersService->getUsers($filterChain, $params, 1, 20);
+
