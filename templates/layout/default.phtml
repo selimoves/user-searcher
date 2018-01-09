@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <?php
+        $this->headTitle('user-searcher')->setSeparator(' - ')->setAutoEscape(false);
+        echo $this->headTitle();
+        ?>
+
+        <link rel="stylesheet" href="/assets/css/reset.min.css" />
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+
+        <script data-main="/assets/js/main" src="/assets/js/lib/require/require.js"></script>
+        <script src="/assets/js/main.js"></script>
+    </head>
+    <body>
+        <main>
+            <header role="banner"></header>
+
+            <nav role="navigation">
+                <ul>
+                    <li><a href="<?php echo $this->url('home');?>">Главная</a></li>
+                </ul>
+            </nav>
+
+            <article class="single">
+                <?php echo $this->content; ?>
+            </article>
+
+            <footer role="contentinfo"></footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<?php $this->headTitle('Home'); ?>
+
+<div id="users" style="box-sizing:border-box; padding:20px; background:#fafafa; overflow:hidden;" v-cloak>
+    <form>
+        <input v-model="filters.country" name="country" type="text" placeholder="country">
+        <button type="submit" @click.prevent="filter">Отфильтровать</button>
+    </form>
+    
+    <table v-if="users">
+        <tr v-for="user in getUsers" v-bind:key="user.id">
+            <td>{{user.id}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+            <td>{{user.reg_date}}</td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    requirejs(["app/users"], function (vm) {
+        vm.$mount("#users");
+    });
+</script>
