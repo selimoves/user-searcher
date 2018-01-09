@@ -6,7 +6,7 @@
 
 Пример формирования цепочки фильтров и передачи их в поиск есть в App\Action\UsersAction.
 
-Ещё пример:
+Полный пример:
 
     $filtersConfig = [
         'id' => Db\Filters\IdFilter::class,
